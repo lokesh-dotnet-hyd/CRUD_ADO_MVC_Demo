@@ -1,0 +1,28 @@
+﻿@model Employee
+@{
+    ViewBag.Title = "Add Employee";
+}
+<h2>Add Employee</h2>
+<form asp-action="Add" method="post">
+    <table>
+        <tr>
+            <td><input type ="hidden" asp-for="Id" /></td>
+        </tr>
+        <tr>
+           <td> Name </td>
+           <td><input asp-for="Name" /></td>
+        </tr>
+        <tr>
+            <td> Department </td>
+            <td><input asp-for="Department" /></td>
+        </tr>
+        <tr>
+            <td> Salary </td>
+            <td><input asp-for="Salary" /></td>
+        </tr>
+        <tr>
+            
+            <td><input type="Submit" value="Submit" /></td>
+        </tr>
+    </table>
+</form>

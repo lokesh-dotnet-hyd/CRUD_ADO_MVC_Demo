@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "Employee List";
+}
+@model IEnumerable<Employee>
+<table>
+    <tr>
+        <td>Id</td>
+        <td>Name</td>
+        <td>Department</td>
+        <td>Sal</td>
+    </tr>
+ 
+    @foreach (var emp in Model)
+    {
+        <tr>
+            <td>@emp.Id</td>
+            <td>@emp.Name</td>
+            <td>@emp.Department</td>
+            <td>@emp.Salary</td>
+            <td><a asp-action="Add" >Add</a></td>
+            <td><a asp-action="Delete" asp-route-id="@emp.Id">Delete</a></td>
+            <td><a asp-action="Update" asp-route-id="@emp.Id">Update</a></td>
+        </tr>
+    }
+    
+</table>
